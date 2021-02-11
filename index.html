@@ -1,70 +1,112 @@
 <!DOCTYPE html>
 <html lang=en>
-    <head>
-        <title>Michele Campeotto</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
-        <link href="https://unpkg.com/sanitize.css/assets.css" rel="stylesheet" />
-        <link href="https://unpkg.com/sanitize.css/typography.css" rel="stylesheet" />
-        <style>
+<head>
+<title>Michele Campeotto</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import "sanitize.css";
+@import "source-serif-text.css";
+
+:root {
+    --color-text: rgb(173, 70, 8);
+    --color-background: rgb(255, 194, 27);
+    --color-text-secondary: rgb(103, 40, 0);
+    --color-text-faded: rgb(230, 165, 10);
+}
+
 html {
-    color: rgb(173, 70, 8);
-    background-color: rgb(255, 194, 27);
+    color: var(--color-text);
+    background-color: var(--color-background);
 }
 
 ::selection {
-    background-color: rgb(173, 70, 8);
-    color: rgb(255, 194, 27);
+    background-color: var(--color-text);
+    color: var(--color-background);
 }
 
-#main {
+body {
+    font-family: "Source Serif", serif;
+    font-variant-numeric: oldstyle-nums proportional-nums;
+    text-rendering: optimizeLegibility;
+}
+
+#bio {
+    margin: 3em auto 0 auto;
+    font-size: 2.5em;
+    max-width: 700px;
+}
+
+@media only screen and (min-width: 1600px) {
+    #bio {
+        font-size: 3em;
+        max-width: 820px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #bio {
+        margin: 1.8em 1em 0 1em;
+        font-size: 1.5em;
+        max-width: initial;
+    }
+}
+
+#bio em {
+    color: var(--color-text-secondary);
+    font-style: normal;
+}
+
+#bio a {
+    color: var(--color-text-secondary);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 1px;
+}
+
+#bio p:after {
+    content: "❧";
+    color: var(--color-text-faded);
+    margin-left: 0.5em;
+}
+
+#bio p:last-of-type:after {
+    content: "";
+}
+
+footer {
     text-align: center;
-    display: inline-block;
-    width: 400px;
-    position: fixed;
-    height: 300px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+    color: var(--color-text-faded);
+    margin-bottom: 5em;
 }
 
-#main h1 {
-    font-weight: 700;
+footer:after {
+    content: "❦";
+    white-space: pre;
     font-size: 3em;
-    margin-block-start: 1em;
-    margin-block-end: 0;
-    line-height: 1em;
 }
+</style>
+</head>
+<body>
+    <section id="bio">
+        <p> Hello, this is the web page of <em>Michele Campeotto</em>. I am
+        a software developer in Treviso, Italia.</p>
 
-#main ul {
-    padding: 0;
-}
+        <p>During my <a href="https://linkedin.com/in/micampe">career</a> I
+        have worked on a variety of projects and technologies. In 2010 I
+        moved to San Francisco, California to work at Apple, designing and developing
+        <a href="https://developer.apple.com/videos/play/wwdc2016/708/">frameworks</a>
+        and <a href="https://developer.apple.com/videos/play/wwdc2018/711/">APIs</a>
+        for iOS and iPadOS.</p>
 
-#main li {
-    display: inline;
-    font-size: 0.8em;
-    margin: 0 0.3em;
-}
+        <p>In 2019 I moved back to Treviso to explore new projects and create
+        something new of my own. But we are not ready to talk about that
+        yet.</p>
 
-#main li a {
-    color: rgb(155, 58, 133);
-    color: rgb(196, 147, 15);
-    text-decoration-style: dashed;
-}
-        </style>
-    </head>
-    <body>
-        <div id=main>
-            <h1>Michele<br>Campeotto</h1>
-            <p>software developer</p>
-            <ul>
-                <li><a href="https://github.com/micampe">code</a></li>
-                <li><a href="https://linkedin.com/in/micampe">experience</a></li>
-                <li><a href="https://instagram.com/micampe">photos</a></li>
-            </ul>
-            <div>
-    </body>
+        <p><a href="mailto:micampe@micampe.it?subject=Hello!">email</a> me if
+        you would like to get in touch.
+    </section>
+
+    <footer></footer>
+</body>
 </html>
