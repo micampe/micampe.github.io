@@ -7,6 +7,9 @@
 <style>
 @import "sanitize.css";
 @import "source-serif-text.css";
+/* This page is set in Source Serif, designed by Frank Grießhammer
+   Copyright 2014-2021 Adobe, used under the terms of the SIL license
+   https://adobe-fonts.github.io/source-serif/ */
 
 :root {
     --color-text: rgb(173, 70, 8);
@@ -65,7 +68,7 @@ body {
 }
 
 #bio p:after {
-    content: "❧";
+    content: "❧"; /* U+2767 */
     color: var(--color-text-faded);
     margin-left: 0.5em;
 }
@@ -81,7 +84,7 @@ footer {
 }
 
 footer:after {
-    content: "❦";
+    content: "❦"; /* U+2766 */
     white-space: pre;
     font-size: 3em;
 }
