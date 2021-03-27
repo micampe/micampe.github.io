@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<title>Michele Campeotto</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<style>
+@import "sanitize.css";
+@import "source-serif-text.css";
+/* This page is set in Source Serif, designed by Frank Grießhammer
+   Copyright 2014-2021 Adobe, used under the terms of the SIL license
+   https://adobe-fonts.github.io/source-serif/ */
+
+:root {
+    --color-text: rgb(173, 70, 8);
+    --color-background: rgb(255, 194, 27);
+    --color-text-secondary: rgb(103, 40, 0);
+    --color-text-faded: rgb(230, 165, 10);
+}
+
+html {
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+::selection {
+    background-color: var(--color-text);
+    color: var(--color-background);
+}
+
+body {
+    font-family: "Source Serif", serif;
+    font-variant-numeric: oldstyle-nums proportional-nums;
+    text-rendering: optimizeLegibility;
+    margin: 3em auto 0 auto;
+    font-size: 2em;
+    max-width: 700px;
+}
+
+h1 {
+    font-family: monospace;
+}
+
+a {
+    color: var(--color-text-secondary);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 1px;
+}
+</style>
+</head>
+<body>
+    <h1>404 Page not found</h1>
+    <p>Unfortunately this page could not be found.</p>
+    <p>If you arrived here through an external link you may find a cached copy at the <a id="link" href="http://web.archive.org/web/1000/">Internet Archive</a>.</p>
+</body>
+<script>
+let link = document.querySelector("#link")
+// link.text = window.location
+link.href = "http://web.archive.org/web/1000/" + window.location
+</script>
+</html>
